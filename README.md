@@ -13,7 +13,7 @@ Features:
 - Replaces Domain/IP-addresses with * in the chat. (Like: mc.miality.com or 98.134.234.92)
 - Word blacklist
 - Seperator blacklist
-- More than two equal character in a row check (Not yet published in this project.)
+- More than two equal character in a row check
 
 More than two equal characters in a row means that whenever a player
 sends messages like "Heeeeeeeello??" it removes the uncessesary characters
