@@ -18,11 +18,20 @@
 # That is a check for whenever a player sends messages with unecessary use of characters.
 # It detects uses like "heeeeeellllllooo?!", and in this case removes the extensive use of e's, o's and l's
 # which would instead return "Heelloo!?" as the final message. This will work on whitelisted players as well.
-# 
-# Config Below
+#
+# The config below "PluginDependencies" requires plugins in order to function. Set those to true only
+# if you have the required plugins.
 
+# General Configurations
 UseMySQL: false
+
+# Functionality Configurations
 UsePlayerWhitelist: true
+
+# PluginDependencies Configuration
+Statistics: false
+AutoWhitelist: false
+WhitelistAfter: 7200
 
 TripplePlusLetters: true
 

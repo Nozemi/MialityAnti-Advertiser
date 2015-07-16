@@ -1,11 +1,13 @@
 package com.miality.antiad;
 
+import java.sql.SQLException;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.miality.antiad.listeners.ChatListener;
+import com.miality.antiad.sql.Installer;
 
 public class AntiAd extends JavaPlugin {
 	
@@ -23,10 +25,24 @@ public class AntiAd extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		logger.info("["+getName().toString()+"] has been enabled.");
-		
+				
 		// Creates the plugin folder in the plugins directory.
 		getDataFolder().mkdirs();
 		pluginDir = getDataFolder().toString(); // Gets this plugins directory.
+
+		this.getConfig().options().copyDefaults(); // Gets the default config file.
+		this.saveConfig(); // Saves the config file to the plugin directory.
+		
+		if(this.getConfig().getString("UseMySQL") == "true") {
+			// Use database saving.
+			try {
+				new Installer(this);
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		} else {
+			// Use flat file saving.
+		}
 		
 		new ChatListener(this); // Starts the chat listener.
 	}
@@ -34,5 +50,6 @@ public class AntiAd extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		logger.info("["+getName().toString()+"] has been disabled.");
+		this.saveConfig();
 	}
 }
