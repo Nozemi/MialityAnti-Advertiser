@@ -1,0 +1,4 @@
+name: MialityAntiAdvert
+main: com.miality.antiad.AntiAd
+version: 1.0
+description: Miality's Anti Advertiser
