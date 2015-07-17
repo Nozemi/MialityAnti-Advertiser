@@ -2,3 +2,13 @@ name: MialityAntiAdvert
 main: com.miality.antiad.AntiAd
 version: 1.0
 description: Miality's Anti Advertiser
+commands:
+  adtoggle:
+    description: Plugin management commands.
+    usage: /adtoggle
+  adplayer:
+    description: Player management commands.
+    usage: /adplayer
+  adblacklist:
+    description: Blacklist management commands.
+    usage: /adblacklist

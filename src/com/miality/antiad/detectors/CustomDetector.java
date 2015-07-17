@@ -17,8 +17,8 @@ public class CustomDetector {
 		Scanner a;
 		Scanner b;
 		try {
-			a = new Scanner(new File(AntiAd.pluginDir+"/blacklist.txt"));
-			b = new Scanner(new File(AntiAd.pluginDir+"/splitwords.txt"));
+			a = new Scanner(new File(AntiAd.pluginDir+File.separator+"Blacklists"+File.separator+"blacklist.txt"));
+			b = new Scanner(new File(AntiAd.pluginDir+File.separator+"Blacklists"+File.separator+"splitwords.txt"));
 			while(a.hasNext()) {
 				blackList.add(a.next());
 			}

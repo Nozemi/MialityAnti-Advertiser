@@ -3,30 +3,18 @@
 # GitHub URL: https://github.com/Nozemi/Miality-Anti-Advertiser
 # DevBukkit URL: None yet.
 #
+# Need help with configuring this? Heaeed to the GitHub or DevBukkit page.
+#
 # So to disable the word blacklist or the splitlist, just erase
 # every single word in the two text files.
-#
-# What is the splitlist.txt?
-# That is to detect players that types something like this: mc(dot)miality(dot)com
-# if (dot) is in that list, it will filter out their attempt to avoid this plugin.
-#
-# What is stored in the database if used?
-# Chat log for use on a website, for instance in Miality's case on the ModCP.
-# The players whitelist will also be stored in the database if enabled.
-#
-# What is "TripplePlusLetters"?
-# That is a check for whenever a player sends messages with unecessary use of characters.
-# It detects uses like "heeeeeellllllooo?!", and in this case removes the extensive use of e's, o's and l's
-# which would instead return "Heelloo!?" as the final message. This will work on whitelisted players as well.
-#
-# The config below "PluginDependencies" requires plugins in order to function. Set those to true only
-# if you have the required plugins.
 
 # General Configurations
 UseMySQL: false
 
 # Functionality Configurations
 UsePlayerWhitelist: true
+AutoMute: false
+SuspectLevel: 4
 
 # PluginDependencies Configuration
 Statistics: false
