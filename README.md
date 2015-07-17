@@ -14,6 +14,8 @@ Features:
 - Word blacklist
 - Seperator blacklist
 - More than two equal character in a row check
+- Whitelist for players (For flatfile saving at least)
+- Flatfile support
 
 More than two equal characters in a row means that whenever a player
 sends messages like "Heeeeeeeello??" it removes the uncessesary characters
@@ -25,9 +27,7 @@ For instance if I tried to type mc(dot)miality(dot)com, and the (dot) was in tha
 it would be detected and filtered. However this method might make a lot of false positives.
 
 Todo List:
-- Whitelist for players
 - Database support
-- Flatfile support
 - Config support
 - Add player to whitelist after X amount of online time
 - Move players to another channel after X amount of attempts
