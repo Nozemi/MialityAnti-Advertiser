@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+*.classpath
+*.gitattributes
+*.gitignore
+*.project
+
 # =========================
 # Operating System Files
 # =========================
