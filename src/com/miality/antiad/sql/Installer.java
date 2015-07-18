@@ -7,9 +7,8 @@ import com.mysql.jdbc.PreparedStatement;
 
 public class Installer extends Connector {
 	public Installer(AntiAd plugin) throws SQLException {
-		String prefix = plugin.getConfig().getString("prefix");
 		String statement = "CREATE TABLE IF NOT EXISTS %prefix%";
-		statement = statement.replaceAll("%prefix%", prefix);
+		statement = statement.replaceAll("%prefix%", Connector.prefix);
 		Connector.open();
 		PreparedStatement installer = (PreparedStatement) connection.
 				prepareStatement(statement);

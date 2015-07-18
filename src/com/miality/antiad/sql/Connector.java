@@ -19,6 +19,7 @@ public class Connector extends JavaPlugin {
 	public static String name = config.getString("name"); // Database name
 	public static String user = config.getString("user"); // Database username
 	public static String pass = config.getString("pass"); // Database password
+	public static String prefix = config.getString("prefix"); // Database table prefix
 	
 	public synchronized static void open() {
 		try {
